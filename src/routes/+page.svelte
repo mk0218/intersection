@@ -33,36 +33,34 @@
         <button on:click={() => {resultPage = true}}>Result</button>
     </div>
     {:else}
-    <div class="container">
-        <div class="row">
-            <div class="column">
-                <h1>List A</h1>
-                <ul>
-                    {#each arrA as v}
-                        <li>{v}</li>
-                    {/each}
-                </ul>
-            </div>
-            <div class="column">
-                <h1>List B</h1>
-                <ul>
-                    {#each arrB as v}
-                        <li>{v}</li>
-                    {/each}
-                </ul>
-            </div>
+    <div class="row">
+        <div class="column">
+            <h1>List A</h1>
+            <ul>
+                {#each arrA as v}
+                    <li>{v}</li>
+                {/each}
+            </ul>
         </div>
-        <div class="row">
-            Result:
-                <ul>
-                    {#each result as v}
-                        <li>{v}</li>
-                    {/each}
-                </ul>
+        <div class="column">
+            <h1>List B</h1>
+            <ul>
+                {#each arrB as v}
+                    <li>{v}</li>
+                {/each}
+            </ul>
         </div>
-        <div class="row button">
-            <button on:click={() => {resultPage = false}}>Back</button>
-        </div>
+    </div>
+    <div class="row">
+        Result:
+            <ul>
+                {#each result as v}
+                    <li>{v}</li>
+                {/each}
+            </ul>
+    </div>
+    <div class="row button">
+        <button on:click={() => {resultPage = false}}>Back</button>
     </div>
     {/if}
 </div>
