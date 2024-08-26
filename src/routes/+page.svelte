@@ -5,10 +5,18 @@
     $: arrA = listA.split("\n");
     $: arrB = listB.split("\n");
     
-    function intersection(arrA, arrB) {
-        const setA = new Set(arrA);
-        const setB = new Set(arrB);
-        const result = setA.intersection(setB);
+    /**
+   * @param {Array<string>} arrayA
+   * @param {Array<string>} arrayB
+   */
+    function intersection(arrayA, arrayB) {
+        const setA = new Set(arrayA);
+        const result = new Set();
+        arrayB.forEach((v) => {
+            if (setA.has(v)) {
+                result.add(v)
+            }
+        })
         return Array.from(result);
     }
     
